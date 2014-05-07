@@ -1,0 +1,24 @@
+##############################################
+#              Nodes                         #
+##############################################
+#example
+#essentials%give
+#    price: 50
+#    perm: 'buynodes.node.egive'
+# When adding permission nodes you must use a % sign instead of a . sign, the reason for this is
+# Bukkit's config api would interpret "bukkit.comand.op" as a path to the price value e.g.:
+#bukkit:
+#    command:
+#         op:
+#So just use a % sign, the plugin automatically converts them to .'s when it imports them :)
+
+# You can now specify if you want only a certain groups to access a permission, to do this, just give the group the permission specified.
+#Colour codes in messages will work. For the permission node, you can just use %n
+bukkit%command%give:
+    price: 50
+    perm: 'buynodes.node.give'
+    buymessage: "&4You just bought %n"
+    alreadyhas: "You already have %n"
+    notenough: "You can't afford that"
+    notforsale: "That permission is not for sale"
+
